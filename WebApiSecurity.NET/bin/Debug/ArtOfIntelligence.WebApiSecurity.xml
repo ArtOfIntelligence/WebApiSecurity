@@ -1,0 +1,99 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+ArtOfIntelligence.WebApiSecurity
+</name>
+</assembly>
+<members>
+<member name="T:ArtOfIntelligence.WebApiSecurity.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:ArtOfIntelligence.WebApiSecurity.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:ArtOfIntelligence.WebApiSecurity.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="M:ArtOfIntelligence.WebApiSecurity.Client.Authenticator.Configure(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+ <summary>
+ Set Authenticator configuration before calling <see cref="M:ArtOfIntelligence.WebApiSecurity.Client.Authenticator.GetAuthenticationHeader(System.Web.HttpContext)" />
+ </summary>
+ <param name="ClientId">The client Id</param>
+ <param name="ClientSecret">The client secret</param>
+ <param name="AuthenticationControllerUrl">
+ The full path to the server controller resposible for authentication. 
+ (e.g. https://yourserver.com/api/auth/)
+ </param>
+ <param name="GetChallengeMethodName">
+ The name of the public <c>GetChallenge</c> web method implemented in your 
+ <see cref="T:ArtOfIntelligence.WebApiSecurity.Server.AuthenticationController"/> implementation on the server
+ </param>
+ <param name="GetChallengeMethod_ClientIdParameterName">
+ The name of the <c>ClientId</c> parameter of the <c>GetChallenge</c> web method implemented in your 
+ <see cref="T:ArtOfIntelligence.WebApiSecurity.Server.AuthenticationController"/> implementation on the server
+ </param>
+ <param name="GetTokenMethodName">
+ The name of the public <c>GetToken</c> web method implemented in your 
+ <see cref="T:ArtOfIntelligence.WebApiSecurity.Server.AuthenticationController"/> implementation on the server
+ </param>
+ <param name="GetTokenMethod_ClientIdParameterName">
+ The name of the <c>ClientId</c> parameter of the <c>GetToken</c> web method implemented in your 
+ <see cref="T:ArtOfIntelligence.WebApiSecurity.Server.AuthenticationController"/> implementation on the server
+ </param>
+ <param name="GetTokenMethod_ChallengeParameterName">
+ The name of the <c>Challenge</c> parameter of the <c>GetToken</c> web method implemented in your 
+ <see cref="T:ArtOfIntelligence.WebApiSecurity.Server.AuthenticationController"/> implementation on the server
+ </param>
+ <param name="GetTokenMethod_SolutionParameterName">
+ The name of the <c>Solution</c> parameter of the <c>GetToken</c> web method implemented in your 
+ <see cref="T:ArtOfIntelligence.WebApiSecurity.Server.AuthenticationController"/> implementation on the server
+ </param>
+ <param name="IsTokenValidMethodName">
+ The name of the public <c>IsTokenValid</c> web method implemented in your 
+ <see cref="T:ArtOfIntelligence.WebApiSecurity.Server.AuthenticationController"/> implementation on the server
+ </param>
+ <param name="AuthorizationScheme">
+ The http authorization scheme (e.g.: <c>Basic</c>, <c>Bearer</c>)
+ </param>
+</member>
+<member name="P:ArtOfIntelligence.WebApiSecurity.Client.Authenticator.Configured">
+ <summary>
+ True if <see cref="T:ArtOfIntelligence.WebApiSecurity.Client.Authenticator" /> is ready (Meaning <see cref="M:ArtOfIntelligence.WebApiSecurity.Client.Authenticator.Configure(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)"/>
+  has been called)
+ </summary>
+</member>
+<member name="M:ArtOfIntelligence.WebApiSecurity.Client.Authenticator.GetAuthenticationHeader(System.Web.HttpContext)">
+ <summary>
+ Returns the <see cref="T:System.Net.Http.Headers.AuthenticationHeaderValue" /> to be added to your request headers
+ </summary>
+ <param name="HttpContext">Current HttpContext</param>
+ <returns></returns>
+</member>
+<member name="M:ArtOfIntelligence.WebApiSecurity.Server.Configurator.Configure(System.String,System.Func{ArtOfIntelligence.WebApiSecurity.Model.Client[]},System.Int32,System.Int32,System.String)">
+ <summary>
+ Set configuration before any execution on <see cref="T:ArtOfIntelligence.WebApiSecurity.Server.AuthenticationFilterAttribute"/>
+ and <see cref="T:ArtOfIntelligence.WebApiSecurity.Server.AuthorizationAttribute"/>
+ </summary>
+ <param name="InternalCipherKey">256-bit key requirement (a string of 32 characters, eg: 12345678ABCDEFG12345678ABCDEFG)</param>
+ <param name="GetClients">A function that returns an array of <see cref="T:ArtOfIntelligence.WebApiSecurity.Model.Client"/></param>
+ <param name="GenerateChallenge">A function that returns random string to use as a challenge</param>
+ <param name="TokenLifetimeDurationInMinutes">Token lifetime duration before the token is expires (in minutes)</param>
+ <param name="ChallengeCacheDurationInSeconds">Number of seconds to hold the Challenge in server cache before it becomes invalid (in seconds)</param>
+ <param name="AuthorizationScheme">The http authorization scheme (e.g.: <c>Basic</c>, <c>Bearer</c>) </param>
+</member>
+<member name="P:ArtOfIntelligence.WebApiSecurity.Server.Configurator.Configured">
+ <summary>
+ True if <see cref="T:ArtOfIntelligence.WebApiSecurity.Server.Configurator" /> is ready (Meaning <see cref="M:ArtOfIntelligence.WebApiSecurity.Server.Configurator.Configure(System.String,System.Func{ArtOfIntelligence.WebApiSecurity.Model.Client[]},System.Int32,System.Int32,System.String)"/>
+  has been called)
+ </summary>
+</member>
+</members>
+</doc>

@@ -3,3 +3,19 @@
 ################################################################################
 
 /Cryptography
+/.vs/ArtOfIntelligence/v15/Server/sqlite3
+/Util
+/ai.snk
+/ArtOfIntelligence.sln
+/WebApiSecurity/obj
+/WebApiSecurity/ai.snk
+*.nupkg
+/WebApiSecurity/WebApiSecurity.NET.nuspec
+/WebApiSecurity/WebApiSecurity.NET.vbproj.vspscc
+/WebApiSecurity/WebApiSecurity.NET.vbproj.user
+/.vs
+/WebApiSecurity.NET/obj
+*.snk
+/WebApiSecurity.NET/WebApiSecurity.NET.vbproj.vspscc
+/WebApiSecurity.NET/WebApiSecurity.NET.vbproj.user
+*.nuspec

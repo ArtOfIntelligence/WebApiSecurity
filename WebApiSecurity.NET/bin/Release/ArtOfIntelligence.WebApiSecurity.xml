@@ -1,0 +1,53 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+ArtOfIntelligence.WebApiSecurity
+</name>
+</assembly>
+<members>
+<member name="T:ArtOfIntelligence.WebApiSecurity.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:ArtOfIntelligence.WebApiSecurity.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:ArtOfIntelligence.WebApiSecurity.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="P:ArtOfIntelligence.WebApiSecurity.Server.Configuration.AuthorizationScheme">
+ <summary>
+ HTTP Authorization Scheme
+ </summary>
+ <example>MatrixKey</example>
+</member>
+<member name="P:ArtOfIntelligence.WebApiSecurity.Server.Configuration.TokenLifetimeDurationInMinutes">
+ <summary>
+ Token will expire after this value (in minutes)
+ </summary>
+ <example>60</example>
+</member>
+<member name="P:ArtOfIntelligence.WebApiSecurity.Server.Configuration.ChallengeCacheDurationInSeconds">
+ <summary>
+ Challenge will expire after this value (in seconds)
+ </summary>
+ <example>15</example>
+</member>
+<member name="P:ArtOfIntelligence.WebApiSecurity.Server.Configuration.InternalCipherKey">
+ <summary>
+ 256-bit key requirement = a string of 32 characters.
+ </summary>
+ <remarks>
+ This will 
+ </remarks>
+ <returns>12345678ABCDEFG12345678ABCDEFG</returns>
+</member>
+</members>
+</doc>
